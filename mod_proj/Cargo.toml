@@ -1,0 +1,7 @@
+[package]
+name = "mod_proj"
+version = "0.1.0"
+authors = ["honestold3 <honestold3@gmail.com>"]
+
+[dependencies]
+my_lib = { path = "../my_lib" }

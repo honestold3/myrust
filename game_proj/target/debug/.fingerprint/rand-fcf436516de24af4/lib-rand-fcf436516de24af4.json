@@ -1,0 +1,1 @@
+{"rustc":10101956705422578530,"features":"[\"default\", \"libc\", \"std\"]","target":11704435198914552709,"profile":2479238963835404001,"path":7665304780368708755,"deps":[["libc v0.2.42 (registry `https://mirrors.ustc.edu.cn/crates.io-index/`)",6801246605152458612]],"local":[{"Precalculated":"0.4.2"}],"rustflags":[],"epoch":"Epoch2015"}

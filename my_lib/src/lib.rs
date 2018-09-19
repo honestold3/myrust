@@ -4,12 +4,7 @@ pub mod client {
     }
 }
 
-mod network {
-    fn connect() {
-    }
+pub mod network;
 
-    mod server {
-        fn connect() {
-        }
-    }
-}
+pub mod networks;
+

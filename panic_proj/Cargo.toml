@@ -1,0 +1,10 @@
+[package]
+name = "panic_proj"
+version = "0.1.0"
+authors = ["honestold3 <honestold3@gmail.com>"]
+
+[dependencies]
+rand = "0.4.0"
+
+[profile.release]
+panic = 'abort'

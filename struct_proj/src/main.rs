@@ -75,6 +75,7 @@ fn area1(dimensions: (u32,u32)) -> u32 {
 }
 
 //---------------------------------------------------------------
+//#[repr(C)]
 struct Rectangle {
     width: u32,
     height: u32,

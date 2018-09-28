@@ -1,1 +1,1 @@
-/Users/wq/rust/myrust/my_lib/target/debug/libmy_lib.rlib: /Users/wq/rust/myrust/my_lib/src/lib.rs
+/Users/wq/rust/myrust/my_lib/target/debug/libmy_lib.rlib: /Users/wq/rust/myrust/my_lib/src/lib.rs /Users/wq/rust/myrust/my_lib/src/network.rs /Users/wq/rust/myrust/my_lib/src/networks/hehe.rs /Users/wq/rust/myrust/my_lib/src/networks/kankan.rs /Users/wq/rust/myrust/my_lib/src/networks/mod.rs

@@ -21,6 +21,7 @@ fn kankan(){
         x: 1,
         y: 2,
     };
+
     println!("Hello, world  ! {:?}",p.kk());
 }
 
@@ -29,10 +30,15 @@ fn main() {
     //kankan()
     //generic::kankan();
     //generic::kankan1();
+    //generic::kankan2();
+    //generic::kankan4();
+    //generic::kankan5();
     //traits::kankan();
 
     //lifetime::kankan();
     //lifetime::kankan1();
+    //lifetime::kankan4();
+    lifetime::kankan5();
 
 //    let a = String::from("qqq");
 //    let b = &a;
@@ -41,9 +47,27 @@ fn main() {
 //
 //    println!("{}",a);
 //    kkkk(a.as_str(),c.as_str());
-    lifetime::kankan3();
+    //lifetime::kankan3();
+    //kankan1("dd");
+
+    let aa = String::from("111");
+    let bb = &aa;
+    //println!("{}",aa);
+
+    let a = "e";
+        let b = "g";
+    //kankan1(a,b);
 }
 
-fn kkkk<'a>(a: &'a str, b: &'a str) ->  &'a str {
-    a
+fn kankan1<'a>(x: &'a str,y: &'a str) -> &'a str{
+    if(x == "222"){
+        x
+    } else {
+        y
+    }
 }
+
+
+
+
+

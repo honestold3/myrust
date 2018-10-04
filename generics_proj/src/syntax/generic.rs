@@ -47,3 +47,73 @@ pub fn kankan1(){
     let result = largest1(&chars);
     println!("The largest char is {}", result);
 }
+
+//-----------------------------------------------------
+#[derive(Debug)]
+struct Point<T>{
+    x: T,
+    y: T,
+}
+
+#[derive(Debug)]
+struct Point1<T,U>{
+    x: T,
+    y: U,
+}
+
+pub fn kankan2(){
+    let mix = Point{x: 5.0,y: 2.0};
+    println!("{:?}",mix);
+
+    let a: f32 = 0 as f32;
+    let b: u8 = 11.5 as u8;
+
+    println!("{}",b)
+}
+
+pub fn kankan3(){
+    let both_integer = Point { x: 5, y: 10 };
+    let both_float = Point { x: 1.0, y: 4.0 };
+    let integer_and_float = Point1 { x: 5, y: 4.0 };
+}
+
+//---------------------------------------------------
+#[derive(Debug)]
+struct Point3<T> {
+    x: T,
+    y: T,
+}
+
+impl<T> Point3<T> {
+    fn x(&self) -> &T {
+        &self.x
+    }
+}
+
+pub fn kankan4(){
+    let p = Point3{x: 5, y: 10};
+    println!("p.x = {}",p.x());
+}
+
+//-------------------------------------------------------
+struct Point4<T, U> {
+    x: T,
+    y: U,
+}
+
+impl<T, U> Point4<T, U> {
+    fn mixup<V, W>(self, other: Point4<V, W>) -> Point4<T, W> {
+        Point4 {
+            x: self.x,
+            y: other.y,
+        }
+    }
+}
+
+pub fn kankan5() {
+    let p1 = Point4 { x: 5, y: 10.4 };
+    let p2 = Point4 { x: "Hello", y: 'c'};
+    let p3 = p1.mixup(p2);
+    println!("p3.x = {}, p3.y = {}", p3.x, p3.y);
+
+}

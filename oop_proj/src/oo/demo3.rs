@@ -28,6 +28,11 @@ impl DraftPost {
             content: self.content,
         }
     }
+
+    pub fn content(&self) -> &str {
+        ""
+    }
+
 }
 
 pub struct PendingReviewPost {
@@ -40,15 +45,25 @@ impl PendingReviewPost {
             content: self.content,
         }
     }
+
+    pub fn content(&self) -> &str {
+        ""
+    }
 }
 
 pub fn kankan(){
     let mut post = Post::new();
+
     post.add_text("I ate a salad for lunch today");
+    println!("1.after add_text-----{}", post.content());
 
     let post = post.request_review();
+    println!("2.after request_review----{}",post.content());
 
     let post = post.approve();
+    println!("3.approve========={}",post.content());
 
     assert_eq!("I ate a salad for lunch today", post.content());
+
+
 }

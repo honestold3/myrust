@@ -161,5 +161,24 @@ fn main() {
     //kankan3();
     //kankan4();
     //kankan5();
-    kankan6();
+    //kankan6();
+    kankan_refcell();
+}
+
+fn kankan_refcell(){
+//    let mut data = 100_i32;
+//    let p : &i32 = &data;
+//    data = 10;
+//    println!("{}", *p);
+
+    use std::cell::Cell;
+
+    let data : Cell<i32> = Cell::new(100);
+    let p = &data;
+    data.set(10);
+    println!("{}", p.get());
+
+    p.set(20);
+    println!("{:?}", data);
+
 }

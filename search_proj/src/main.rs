@@ -7,6 +7,8 @@ use std::process;
 use search_proj::Config;
 
 fn main() {
+
+    //cargo run the poem.txt
 //    let mut stderr = std::io::stderr();
 //    let config = Config::new(env::args()).unwrap_or_else(|err| {
 //        writeln!(

@@ -25,7 +25,14 @@ fn main() {
     //types::kankan();
     //closures::kankan();
     //closures::kankan1();
-    closures::kankan3();
+    //closures::kankan3();
+
+    closures::anonymous_fnonce();
+    closures::anonymous_fnonce_callback();
+    closures::anonymous_fnmut();
+    closures::anonymous_fnmut_callback();
+    closures::anonymous_fn();
+    closures::anonymous_fn_callback();
 
 }
 

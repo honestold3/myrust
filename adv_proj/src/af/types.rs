@@ -15,3 +15,12 @@ pub fn kankan(){
     f1();
 }
 
+#[macro_export]
+macro_rules! multiply_add {
+    ($a:expr, $b:expr, $c:expr) => {$a * ($b + $c)};
+}
+
+pub fn kankan1(){
+    let kk = multiply_add!(1,2,3);
+    println!("{}",kk);
+}

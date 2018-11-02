@@ -1,4 +1,5 @@
 use std::collections::HashMap;
+use std::cell::RefCell;
 
 
 pub fn kankan(){
@@ -10,7 +11,27 @@ pub fn kankan(){
     let teams = vec![String::from("kk"),String::from("kkk")];
     let init_scores = vec![111,222];
     let map: HashMap<_,_> = teams.iter().zip(init_scores.iter()).collect();
+//    {
+//        map.entry(&String::from("kk")).or_insert(&{ 50 });
+//    }
     println!("{:?}",map)
+}
+
+pub fn kankan11(){
+
+    let teams = vec![String::from("kk"),String::from("kkk")];
+    let init_scores = vec![RefCell::new(111),RefCell::new(222)];
+    let mut map: HashMap<_,_> = teams.iter().zip(init_scores.iter()).collect();
+
+    let v = map.get(&String::from("kk")).unwrap();
+    *v.borrow_mut() += 10;
+    //change(v);
+
+    println!("{:?}",map);
+}
+
+fn change<'a>(m: &'a RefCell<i32>){
+    *m.borrow_mut() += 10;
 }
 
 pub fn kankan1(){

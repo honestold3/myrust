@@ -11,7 +11,7 @@ fn main() {
     //vector::kankan2();
     //vector::kankan3();
 
-    //map::kankan();
+    map::kankan11();
 
     //map::kankan1();
     //map::kankan2();
@@ -27,6 +27,6 @@ fn main() {
 
     //strings::kankan1();
     //strings::format();
-    strings::split_str();
+    //strings::split_str();
 
 }

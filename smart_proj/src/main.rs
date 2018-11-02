@@ -162,7 +162,8 @@ fn main() {
     //kankan4();
     //kankan5();
     //kankan6();
-    kankan_refcell();
+    //kankan_refcell();
+    kankan_borrow();
 }
 
 fn kankan_refcell(){
@@ -182,3 +183,26 @@ fn kankan_refcell(){
     println!("{:?}", data);
 
 }
+
+//----------------------------------------
+fn kankan_borrow(){
+    let data = RefCell::new(5);
+    demo(&data);
+}
+
+fn demo(r: &RefCell<i32>) {
+    immut_borrow(&r.borrow());
+    mut_borrow(&mut r.borrow_mut());
+    immut_borrow(&r.borrow())
+}
+
+
+fn immut_borrow(a: &i32){
+    println!("a is {}",a)
+}
+
+fn mut_borrow(b: &mut i32){
+    *b +=1;
+}
+
+

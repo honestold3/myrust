@@ -193,6 +193,7 @@ fn kankan_borrow(){
 fn demo(r: &RefCell<i32>) {
     immut_borrow(&r.borrow());
     mut_borrow(&mut r.borrow_mut());
+    mut_borrow(&mut r.borrow_mut());
     immut_borrow(&r.borrow())
 }
 

@@ -32,6 +32,7 @@ fn main() {
     let s6 = String::from("hello");
 
     let s7 = takes_and_gives_back(s6);
+
     println!("s7::{}",s7);
 
     println!("s5::{}",s5); //no error s5 is return value

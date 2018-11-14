@@ -154,8 +154,8 @@ fn main() {
     //kankan();
     //kankan1();
     //kankan2();
-    kankan3();
-    //kankan4();
+    //kankan3();
+    kankan4();
     //kankan_option();
 }
 

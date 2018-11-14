@@ -96,17 +96,36 @@ pub fn kankan4(){
 }
 
 //-------------------------------------------------------
+#[derive(Debug)]
 struct Point4<T, U> {
     x: T,
     y: U,
 }
 
-impl<T, U> Point4<T, U> {
+impl<T, U> Point4<T, U> where T: Debug+Copy{
     fn mixup<V, W>(self, other: Point4<V, W>) -> Point4<T, W> {
+//        match other.x {
+//            str => {
+//                &other.x;
+//                //println!("Is String!{:?}",other.x)
+//            },
+//        }
         Point4 {
             x: self.x,
             y: other.y,
         }
+    }
+
+    fn getV(self){
+        match self.x {
+           str => {
+               println!("{:?}",self.x)
+           },
+            i32 => {
+                println!("{:?}",self.x)
+            }
+        }
+
     }
 }
 
@@ -116,4 +135,11 @@ pub fn kankan5() {
     let p3 = p1.mixup(p2);
     println!("p3.x = {}, p3.y = {}", p3.x, p3.y);
 
+    let p4 = Point4 { x: "Hello!!!!", y: 'c'};
+
+    p4.getV();
+
+    let p5 =  Point4 { x: 55, y: 10.4 };
+
+    p5.getV();
 }

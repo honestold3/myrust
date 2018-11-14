@@ -32,13 +32,13 @@ fn main() {
     //generic::kankan1();
     //generic::kankan2();
     //generic::kankan4();
-    //generic::kankan5();
+    generic::kankan5();
     //traits::kankan();
 
     //lifetime::kankan();
     //lifetime::kankan1();
     //lifetime::kankan4();
-    lifetime::kankan5();
+    //lifetime::kankan5();
 
 //    let a = String::from("qqq");
 //    let b = &a;

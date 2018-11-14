@@ -24,7 +24,9 @@ pub fn kankan11(){
     let mut map: HashMap<_,_> = teams.iter().zip(init_scores.iter()).collect();
 
     let v = map.get(&String::from("kk")).unwrap();
-    *v.borrow_mut() += 10;
+    let aa = *v.borrow_mut();
+
+    let bb = *v.borrow_mut();
     //change(v);
 
     println!("{:?}",map);
